@@ -40,7 +40,7 @@ body {
 }
 
 /* PROFILE IMAGE */
-.profile-pic {
+.profile-pic {animation: glow 2s infinite alternate;
     width: 140px;
     height: 140px;
     border-radius: 50%;
@@ -99,4 +99,12 @@ body {
 .center p {
     max-width: 600px;
     margin: auto;
+}
+@keyframes glow {
+    from {
+        box-shadow: 0 0 15px rgba(255,255,255,0.6);
+    }
+    to {
+        box-shadow: 0 0 30px rgba(255,255,255,1);
+    }
 }
