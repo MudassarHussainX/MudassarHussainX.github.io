@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mudassar Hussain</title>
 
-<link rel="stylesheet" href="style.css?v=20">
+<link rel="stylesheet" href="style.css?v=99">
 <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 </head>
 
@@ -17,7 +17,7 @@
 <header class="hero">
     <img src="profile.jpg" class="profile-pic">
     <h1>Mudassar Hussain</h1>
-    <p class="tagline">Dental Student | Aspiring Healthcare Innovator</p>
+    <p>Dental Student | Aspiring Healthcare Innovator</p>
 </header>
 
 <main class="container">
@@ -32,10 +32,10 @@ I am a first-year dental student at the beginning of my academic journey, curren
 <section class="card hidden">
 <h2><i class="ri-graduation-cap-line"></i> Education</h2>
 <ul>
-<li><strong>BDS (Bachelor of Dental Surgery)</strong> – BGS Global Dental College and Hospital (2025–Present)</li>
+<li><strong>BDS</strong> – BGS Global Dental College and Hospital (2025–Present)</li>
 <li><strong>BBA DBE</strong> – Indian Institute of Management Bangalore (2025–Present)</li>
-<li><strong>PUC (12th)</strong> – Christ Junior College (2020–2022)</li>
-<li><strong>SSLC (10th)</strong> – Christ School (2020)</li>
+<li><strong>PUC</strong> – Christ Junior College (2020–2022)</li>
+<li><strong>SSLC</strong> – Christ School (2020)</li>
 </ul>
 </section>
 
@@ -65,18 +65,18 @@ I am a first-year dental student at the beginning of my academic journey, curren
 <section class="card hidden">
 <h2><i class="ri-code-line"></i> Projects</h2>
 <ul>
-<li>Contributed to a Poster on AI in Behavioural Dentistry at the Karnataka State Medical and Dental Conference 2026, held at BGS Global Institute of Medical Sciences</li>
-<li>Developed a Personal Resume Website using HTML and CSS</li>
-<li>Completed a ₹250 Venture Project as part of the IIM BBA DBE program</li>
+<li>Poster on AI in Behavioural Dentistry – Karnataka State Medical and Dental Conference 2026</li>
+<li>Personal Resume Website using HTML & CSS</li>
+<li>₹250 Venture Project – IIM BBA DBE</li>
 </ul>
 </section>
 
 <section class="card hidden">
 <h2><i class="ri-trophy-line"></i> Participation</h2>
 <ul>
-<li>Participated in the Karnataka State Medical and Dental Conference</li>
-<li>Participated in OJAS 2026, the annual sports meet for dental students held by Government Dental College, Bangalore</li>
-<li>Secured Runner-Up position in the IPL Auction Event at NOVA 2025, conducted by IIM Bangalore</li>
+<li>Karnataka State Medical and Dental Conference</li>
+<li>OJAS 2026 Sports Meet – Govt Dental College Bangalore</li>
+<li>Runner-Up – IPL Auction Event, NOVA 2025 (IIM Bangalore)</li>
 </ul>
 </section>
 
@@ -102,11 +102,11 @@ I am a first-year dental student at the beginning of my academic journey, curren
 <script>
 function toggleTheme() {
     document.body.classList.toggle("dark");
-    let btn = document.getElementById("themeBtn");
+    const btn = document.getElementById("themeBtn");
     btn.innerText = document.body.classList.contains("dark") ? "☀️" : "🌑";
 }
 
-/* Scroll animation */
+/* FIXED ANIMATION */
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if(entry.isIntersecting){
@@ -115,7 +115,7 @@ const observer = new IntersectionObserver(entries => {
     });
 });
 
-document.querySelectorAll(".card").forEach(el => observer.observe(el));
+document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
 </script>
 
 </body>
