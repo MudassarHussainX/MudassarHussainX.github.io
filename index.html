@@ -1,117 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mudassar Hussain | Resume</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mudassar Hussain</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
 </head>
 
 <body>
 
+<div class="bg-animation"></div>
+
+<button onclick="toggleTheme()" class="theme-toggle" id="themeBtn">🌑</button>
+
 <header class="hero">
     <img src="profile.jpg" class="profile-pic">
-    <h1>Mudassar Hussain</h1>
-    <p class="tagline">Dental Student | Future Entrepreneur</p>
+    <h1 id="typing"></h1>
+    <p>Dental Student | Future Healthcare Innovator</p>
 </header>
 
 <nav class="navbar">
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#academics">Academics</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#activities">Activities</a>
-    <a href="#hobbies">Hobbies</a>
-    <a href="#contact">Contact</a>
-    <button onclick="toggleTheme()" class="theme-btn">🌙</button>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <main class="container">
 
 <section id="about" class="card hidden">
-    <h2>Profile</h2>
-   <p>I am a first-year dental student at the beginning of my academic journey, currently building a strong foundation in basic sciences and clinical concepts. I am developing essential skills in communication, patient care, and problem-solving. Alongside my studies, I am deeply interested in creating a meaningful impact in the healthcare sector by exploring ways to make services more accessible, affordable, and efficient at a larger scale. I am eager to learn, grow through experience, and contribute towards improving healthcare outcomes in the future.</p>
-    
+<h2><i class="ri-user-line"></i> Profile</h2>
+<p>
+I am a first-year dental student building a strong foundation in healthcare while aiming to create large-scale impact through accessibility and innovation.
+</p>
+</section>
 
 <section id="education" class="card hidden">
-    <h2>Education</h2>
-    <p><strong>BDS</strong> - BGS Global Dental College and Hospital | 2025- Present</p>
-    <p><strong>PUC</strong> - Christ Junior College | 2020 - 2022</p>
-    <p><strong>School</strong> - Christ School | 2020</p>
-</section>
+<h2><i class="ri-graduation-cap-line"></i> Education</h2>
 
-<section id="academics" class="card hidden">
-    <h2>Academic Achievements</h2>
-    <ul>
-        <li>90.5% in 10th</li>
-        <li>90.7% in PUC</li>
-        <li>Participated in competitions</li>
-    </ul>
-</section>
+<div class="timeline">
+<div class="timeline-item"><div class="dot"></div><h3>BDS</h3><p>BGS Global Dental College</p><span>2025 - Present</span></div>
+<div class="timeline-item"><div class="dot"></div><h3>PUC</h3><p>Christ Junior College</p><span>2020 - 2022</span></div>
+</div>
 
-<section id="experience" class="card hidden">
-    <h2>Experience</h2>
-    <p>Intern / Volunteer experience (if any)</p>
-</section>
-
-<section id="projects" class="card hidden">
-    <h2>Projects</h2>
-    <p>Resume Website using HTML & CSS</p>
 </section>
 
 <section id="skills" class="card hidden">
-    <h2>Skills</h2>
-    <ul>
-        <li>Communication</li>
-        <li>Patient Care</li>
-        <li>Problem Solving</li>
-    </ul>
+<h2><i class="ri-tools-line"></i> Skills</h2>
+
+<div class="skill">
+<p>Communication</p>
+<div class="bar"><div class="progress" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+<p>Patient Care</p>
+<div class="bar"><div class="progress" style="width:80%"></div></div>
+</div>
+
 </section>
 
-<section id="activities" class="card hidden">
-    <h2>Extracurricular</h2>
-    <ul>
-        <li>College events</li>
-        <li>Community work</li>
-    </ul>
-</section>
-
-<section id="hobbies" class="card hidden">
-    <h2>Hobbies</h2>
-    <ul>
-        <li>Fitness</li>
-        <li>Learning business</li>
-    </ul>
+<section id="projects" class="card hidden">
+<h2><i class="ri-code-line"></i> Projects</h2>
+<p>Resume Website using HTML & CSS</p>
 </section>
 
 <section id="contact" class="card hidden">
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-    <p>Phone: +91 XXXXX XXXXX</p>
+<h2><i class="ri-mail-line"></i> Contact</h2>
+<p>Email: your@email.com</p>
 </section>
 
 </main>
 
 <footer class="footer">
-    <p>© 2026 Mudassar Hussain</p>
+<p>© 2026 Mudassar Hussain</p>
 </footer>
 
 <script>
-function toggleTheme() {
-    document.body.classList.toggle("dark");
+function toggleTheme(){
+document.body.classList.toggle("dark");
+let btn=document.getElementById("themeBtn");
+btn.innerText=document.body.classList.contains("dark")?"☀️":"🌑";
 }
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add("show");
-        }
-    });
-});
+/* Typing effect */
+const text="Mudassar Hussain";
+let i=0;
+function type(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(type,80);
+}
+}
+type();
 
-document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
+/* Scroll animation */
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+document.querySelectorAll(".hidden").forEach(el=>observer.observe(el));
 </script>
 
 </body>
