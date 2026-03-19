@@ -12,103 +12,74 @@
 
 <body>
 
-<div class="bg-animation"></div>
-
-<button onclick="toggleTheme()" class="theme-toggle" id="themeBtn">🌑</button>
-
 <header class="hero">
     <img src="profile.jpg" class="profile-pic">
-    <h1 id="typing"></h1>
-    <p>Dental Student | Future Healthcare Innovator</p>
+    <h1>Mudassar Hussain</h1>
+    <p class="tagline">Dental Student • Healthcare Impact Focus</p>
 </header>
-
-<nav class="navbar">
-<a href="#about">About</a>
-<a href="#education">Education</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</nav>
 
 <main class="container">
 
-<section id="about" class="card hidden">
+<section class="card">
 <h2><i class="ri-user-line"></i> Profile</h2>
 <p>
-I am a first-year dental student building a strong foundation in healthcare while aiming to create large-scale impact through accessibility and innovation.
+I am a first-year dental student building a strong foundation in healthcare, while exploring ways to create meaningful impact through accessibility and efficiency at scale.
 </p>
 </section>
 
-<section id="education" class="card hidden">
+<section class="card">
 <h2><i class="ri-graduation-cap-line"></i> Education</h2>
 
 <div class="timeline">
-<div class="timeline-item"><div class="dot"></div><h3>BDS</h3><p>BGS Global Dental College</p><span>2025 - Present</span></div>
-<div class="timeline-item"><div class="dot"></div><h3>PUC</h3><p>Christ Junior College</p><span>2020 - 2022</span></div>
+
+<div class="item">
+<span class="dot"></span>
+<p><strong>BDS</strong> – BGS Global Dental College (2025–Present)</p>
+</div>
+
+<div class="item">
+<span class="dot"></span>
+<p><strong>PUC</strong> – Christ Junior College (2020–2022)</p>
+</div>
+
+<div class="item">
+<span class="dot"></span>
+<p><strong>School</strong> – Christ School (2020)</p>
+</div>
+
 </div>
 
 </section>
 
-<section id="skills" class="card hidden">
+<section class="card">
+<h2><i class="ri-award-line"></i> Academics</h2>
+<ul>
+<li>10th Grade: <strong>90.5%</strong></li>
+<li>PUC (12th): <strong>90.7%</strong></li>
+</ul>
+</section>
+
+<section class="card">
 <h2><i class="ri-tools-line"></i> Skills</h2>
-
-<div class="skill">
-<p>Communication</p>
-<div class="bar"><div class="progress" style="width:90%"></div></div>
-</div>
-
-<div class="skill">
-<p>Patient Care</p>
-<div class="bar"><div class="progress" style="width:80%"></div></div>
-</div>
-
+<ul>
+<li>Communication</li>
+<li>Patient Care</li>
+<li>Problem Solving</li>
+</ul>
 </section>
 
-<section id="projects" class="card hidden">
+<section class="card">
 <h2><i class="ri-code-line"></i> Projects</h2>
-<p>Resume Website using HTML & CSS</p>
+<p>Personal Resume Website using HTML & CSS</p>
 </section>
 
-<section id="contact" class="card hidden">
+<section class="card">
 <h2><i class="ri-mail-line"></i> Contact</h2>
 <p>Email: your@email.com</p>
+<p>Phone: +91 XXXXX XXXXX</p>
 </section>
 
 </main>
-
-<footer class="footer">
-<p>© 2026 Mudassar Hussain</p>
-</footer>
-
-<script>
-function toggleTheme(){
-document.body.classList.toggle("dark");
-let btn=document.getElementById("themeBtn");
-btn.innerText=document.body.classList.contains("dark")?"☀️":"🌑";
-}
-
-/* Typing effect */
-const text="Mudassar Hussain";
-let i=0;
-function type(){
-if(i<text.length){
-document.getElementById("typing").innerHTML+=text.charAt(i);
-i++;
-setTimeout(type,80);
-}
-}
-type();
-
-/* Scroll animation */
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
-document.querySelectorAll(".hidden").forEach(el=>observer.observe(el));
-</script>
 
 </body>
 </html>
