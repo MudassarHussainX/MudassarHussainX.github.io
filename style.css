@@ -1,50 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #eef2f3;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Top profile */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+    color: #1f2937;
+    transition: 0.4s;
+}
+
+/* HERO */
 .hero {
     text-align: center;
-    background: #1e3a8a;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
     color: white;
-    padding: 50px 20px;
 }
 
 .profile-pic {
-    width: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    border: 5px solid white;
+    margin-bottom: 15px;
+    object-fit: cover;
+    box-shadow: 0 0 25px rgba(255,255,255,0.5);
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
     display: flex;
     justify-content: center;
     gap: 20px;
-    background: white;
-    padding: 10px;
+    padding: 15px;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.7);
+    position: sticky;
+    top: 0;
+    flex-wrap: wrap;
 }
 
 .navbar a {
     text-decoration: none;
+    font-weight: 600;
     color: #1e3a8a;
-    font-weight: bold;
 }
 
-/* Content */
+.navbar a:hover {
+    color: #2563eb;
+}
+
+.theme-btn {
+    border: none;
+    cursor: pointer;
+}
+
+/* CONTENT */
 .container {
-    width: 90%;
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 900px;
+    margin: 40px auto;
 }
 
+/* CARDS */
 .card {
-    background: white;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.6);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
     padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 10px;
+    background: #1e3a8a;
+    color: white;
+}
+
+/* DARK MODE */
+.dark {
+    background: #0f172a;
+    color: white;
+}
+
+.dark .card {
+    background: rgba(30,41,59,0.8);
+}
+
+.dark .navbar {
+    background: rgba(2,6,23,0.8);
+}
+
+.dark .hero {
+    background: #020617;
+}
+
+/* ANIMATION */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
