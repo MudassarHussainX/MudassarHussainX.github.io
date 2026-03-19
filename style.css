@@ -1,14 +1,14 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    background: linear-gradient(135deg, #e0e7ff, #f1f5f9);
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
     color: white;
 }
 
@@ -19,43 +19,38 @@ body {
     margin-bottom: 10px;
 }
 
-/* MAIN CONTAINER */
+/* LAYOUT */
 .container {
     max-width: 720px;
-    margin: 30px auto;
+    margin: 25px auto;
 }
 
-/* CARD STYLE */
+/* CARDS */
 .card {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 22px 26px;
-    margin-bottom: 18px;
-    border-radius: 14px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    transition: 0.25s ease;
+    background: white;
+    padding: 20px 25px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: 0.2s ease;
 }
 
-/* HOVER EFFECT */
 .card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
 }
 
-/* HEADINGS */
+/* TEXT */
 .card h2 {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     color: #1e3a8a;
-    font-size: 18px;
 }
 
-/* ICON SPACING */
 .card i {
     margin-right: 6px;
 }
 
-/* TEXT */
 .card p {
     line-height: 1.6;
-    color: #333;
 }
 
 .card ul {
@@ -65,24 +60,3 @@ body {
 .card li {
     margin-bottom: 6px;
 }
-
-/* TIMELINE STYLE */
-.timeline {
-    border-left: 2px solid #3b82f6;
-    padding-left: 14px;
-}
-
-.item {
-    position: relative;
-    margin-bottom: 10px;
-}
-
-.dot {
-    position: absolute;
-    left: -10px;
-    top: 6px;
-    width: 8px;
-    height: 8px;
-    background: #3b82f6;
-    border-radius: 50%;
-} 
