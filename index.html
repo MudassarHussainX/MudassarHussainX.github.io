@@ -6,51 +6,113 @@
     <title>Mudassar Hussain | Resume</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header class="hero">
-    <img src="https://via.placeholder.com/140" class="profile-pic">
+    <img src="profile.jpg" class="profile-pic">
     <h1>Mudassar Hussain</h1>
-    <p>Dental Student | Aspiring Entrepreneur</p>
+    <p class="tagline">Dental Student | Future Entrepreneur</p>
 </header>
 
 <nav class="navbar">
-    <a href="#contact">Contact</a>
-    <a href="#about">Profile</a>
+    <a href="#about">About</a>
     <a href="#education">Education</a>
+    <a href="#academics">Academics</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
+    <a href="#activities">Activities</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#contact">Contact</a>
+    <button onclick="toggleTheme()" class="theme-btn">🌙</button>
 </nav>
 
-<div class="container">
+<main class="container">
 
-    <div id="contact" class="card">
-        <h2>Contact</h2>
-        <p>Email: Mudassar9181@gmail.com</p>
-        <p>Phone: +91 6363917527</p>
-        <p>Location: Bangalore</p>
-    </div>
+<section id="about" class="card hidden">
+    <h2>Profile</h2>
+    <p>I am a dental student passionate about making dental care affordable and accessible. I aim to create impactful healthcare solutions.</p>
+</section>
 
-    <div id="about" class="card">
-        <h2>Profile</h2>
-        <p>I am a dental student passionate about making dental care affordable and accessible.</p>
-    </div>
+<section id="education" class="card hidden">
+    <h2>Education</h2>
+    <p><strong>BDS</strong> - Your College | 2024 - Present</p>
+    <p><strong>PUC</strong> - Your PU College | 2022 - 2024</p>
+    <p><strong>School</strong> - Your School | 2022</p>
+</section>
 
-    <div id="education" class="card">
-        <h2>Education</h2>
-        <p>BDS - 1st Year </p>
-        <p>Year: 2026- Present</p>
-    </div>
+<section id="academics" class="card hidden">
+    <h2>Academic Achievements</h2>
+    <ul>
+        <li>XX% in 10th</li>
+        <li>XX% in PUC</li>
+        <li>Participated in competitions</li>
+    </ul>
+</section>
 
-    <div id="skills" class="card">
-        <h2>Skills</h2>
-        <ul>
-            <li>Communication</li>
-            <li>Patient Care</li>
-            <li>Problem Solving</li>
-        </ul>
-    </div>
+<section id="experience" class="card hidden">
+    <h2>Experience</h2>
+    <p>Intern / Volunteer experience (if any)</p>
+</section>
 
-</div>
+<section id="projects" class="card hidden">
+    <h2>Projects</h2>
+    <p>Resume Website using HTML & CSS</p>
+</section>
+
+<section id="skills" class="card hidden">
+    <h2>Skills</h2>
+    <ul>
+        <li>Communication</li>
+        <li>Patient Care</li>
+        <li>Problem Solving</li>
+    </ul>
+</section>
+
+<section id="activities" class="card hidden">
+    <h2>Extracurricular</h2>
+    <ul>
+        <li>College events</li>
+        <li>Community work</li>
+    </ul>
+</section>
+
+<section id="hobbies" class="card hidden">
+    <h2>Hobbies</h2>
+    <ul>
+        <li>Fitness</li>
+        <li>Learning business</li>
+    </ul>
+</section>
+
+<section id="contact" class="card hidden">
+    <h2>Contact</h2>
+    <p>Email: your@email.com</p>
+    <p>Phone: +91 XXXXX XXXXX</p>
+</section>
+
+</main>
+
+<footer class="footer">
+    <p>© 2026 Mudassar Hussain</p>
+</footer>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
