@@ -1,10 +1,11 @@
+/* ===== BODY BACKGROUND (VISIBLE BLUE-WHITE) ===== */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #e0e7ff, #f1f5f9);
+    background: linear-gradient(135deg, #c7d2fe, #e0f2fe);
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero {
     text-align: center;
     padding: 50px 20px;
@@ -12,44 +13,45 @@ body {
     color: white;
 }
 
-/* SHINY PROFILE */
+/* ===== PROFILE IMAGE (SHINY) ===== */
 .profile-pic {
     width: 130px;
     height: 130px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid white;
-    box-shadow: 0 0 25px rgba(255,255,255,0.8);
+    box-shadow: 0 0 25px rgba(255,255,255,0.9);
     margin-bottom: 10px;
 }
 
-/* LAYOUT */
+/* ===== CONTAINER ===== */
 .container {
     max-width: 750px;
     margin: 25px auto;
     padding: 0 15px;
 }
 
-/* CARDS */
+/* ===== CARDS ===== */
 .card {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     padding: 22px 25px;
     margin-bottom: 18px;
     border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    transition: 0.2s;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: 0.2s ease;
 }
 
+/* HOVER EFFECT */
 .card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 }
 
-/* CENTER TEXT */
+/* ===== CENTER PROFILE ===== */
 .center {
     text-align: center;
 }
 
-/* TEXT */
+/* ===== TEXT ===== */
 .card h2 {
     margin-bottom: 10px;
     color: #1e3a8a;
