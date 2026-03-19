@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mudassar Hussain</title>
 
-<link rel="stylesheet" href="style.css?v=10">
-
-<!-- ICONS -->
+<link rel="stylesheet" href="style.css?v=20">
 <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body>
+
+<!-- DARK MODE BUTTON -->
+<button onclick="toggleTheme()" class="theme-toggle" id="themeBtn">🌑</button>
 
 <header class="hero">
     <img src="profile.jpg" class="profile-pic">
@@ -21,24 +22,24 @@
 
 <main class="container">
 
-<section class="card center">
+<section class="card center hidden">
 <h2><i class="ri-user-line"></i> Profile</h2>
 <p>
 I am a first-year dental student at the beginning of my academic journey, currently building a strong foundation in basic sciences and clinical concepts. I am developing essential skills in communication, patient care, and problem-solving. Alongside my studies, I am deeply interested in creating a meaningful impact in the healthcare sector by exploring ways to make services more accessible, affordable, and efficient at a larger scale. I am eager to learn, grow through experience, and contribute towards improving healthcare outcomes in the future.
 </p>
 </section>
 
-<section class="card">
+<section class="card hidden">
 <h2><i class="ri-graduation-cap-line"></i> Education</h2>
 <ul>
 <li><strong>BDS (Bachelor of Dental Surgery)</strong> – BGS Global Dental College and Hospital (2025–Present)</li>
-<li><strong>BBA DBE</strong> – Indian Institute of Management Bangalore (IIMB) (2025–Present)</li>
+<li><strong>BBA DBE</strong> – Indian Institute of Management Bangalore (2025–Present)</li>
 <li><strong>PUC (12th)</strong> – Christ Junior College (2020–2022)</li>
 <li><strong>SSLC (10th)</strong> – Christ School (2020)</li>
 </ul>
 </section>
 
-<section class="card">
+<section class="card hidden">
 <h2><i class="ri-award-line"></i> Academics</h2>
 <ul>
 <li>SSLC (10th): <strong>90.5%</strong></li>
@@ -46,7 +47,7 @@ I am a first-year dental student at the beginning of my academic journey, curren
 </ul>
 </section>
 
-<section class="card">
+<section class="card hidden">
 <h2><i class="ri-tools-line"></i> Skills</h2>
 <ul>
 <li>Communication Skills</li>
@@ -61,7 +62,7 @@ I am a first-year dental student at the beginning of my academic journey, curren
 </ul>
 </section>
 
-<section class="card">
+<section class="card hidden">
 <h2><i class="ri-code-line"></i> Projects</h2>
 <ul>
 <li>Contributed to a Poster on AI in Behavioural Dentistry at the Karnataka State Medical and Dental Conference 2026, held at BGS Global Institute of Medical Sciences</li>
@@ -70,7 +71,7 @@ I am a first-year dental student at the beginning of my academic journey, curren
 </ul>
 </section>
 
-<section class="card">
+<section class="card hidden">
 <h2><i class="ri-trophy-line"></i> Participation</h2>
 <ul>
 <li>Participated in the Karnataka State Medical and Dental Conference</li>
@@ -79,7 +80,7 @@ I am a first-year dental student at the beginning of my academic journey, curren
 </ul>
 </section>
 
-<section class="card">
+<section class="card hidden">
 <h2><i class="ri-heart-line"></i> Hobbies</h2>
 <ul>
 <li>Playing Cricket</li>
@@ -89,7 +90,7 @@ I am a first-year dental student at the beginning of my academic journey, curren
 </ul>
 </section>
 
-<section class="card">
+<section class="card hidden">
 <h2><i class="ri-mail-line"></i> Contact</h2>
 <p>Phone: 6363917527</p>
 <p>Email: Mudassar9181@gmail.com</p>
@@ -97,6 +98,25 @@ I am a first-year dental student at the beginning of my academic journey, curren
 </section>
 
 </main>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+    let btn = document.getElementById("themeBtn");
+    btn.innerText = document.body.classList.contains("dark") ? "☀️" : "🌑";
+}
+
+/* Scroll animation */
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+document.querySelectorAll(".card").forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
