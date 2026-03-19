@@ -101,9 +101,25 @@ I am a first-year dental student at the beginning of my academic journey, curren
 </main>
 
 <script>
+const btn = document.getElementById("themeBtn");
+
+/* AUTO DETECT SYSTEM THEME */
+function applyTheme() {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add("dark");
+        btn.innerText = "☀️";
+    } else {
+        document.body.classList.remove("dark");
+        btn.innerText = "🌑";
+    }
+}
+
+/* RUN ON LOAD */
+document.addEventListener("DOMContentLoaded", applyTheme);
+
+/* TOGGLE BUTTON */
 function toggleTheme() {
     document.body.classList.toggle("dark");
-    const btn = document.getElementById("themeBtn");
     btn.innerText = document.body.classList.contains("dark") ? "☀️" : "🌑";
 }
 
@@ -117,6 +133,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 </script>
-
-</body>
-</html>
