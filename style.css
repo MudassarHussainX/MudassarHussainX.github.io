@@ -111,10 +111,12 @@ margin-bottom: 10px;
 .center-heading {
     text-align: center;
 }
-
 .center-heading i {
-    margin-right: 6px;
-    font-size: 18px;
+    font-size: 26px;
+    margin-right: 8px;
+    vertical-align: middle;
+    opacity: 0.9;
+}
 }
 .center-heading {
     width: 100%;
