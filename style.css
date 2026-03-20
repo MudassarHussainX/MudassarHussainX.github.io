@@ -108,18 +108,3 @@
 .card h2 {
 margin-bottom: 10px;
 }
-.center-heading {
-    text-align: center;
-}
-.center-heading i {
-    font-size: 26px !important;
-    margin-right: 8px;
-    vertical-align: middle;
-}
-}
-}
-.center-heading {
-    width: 100%;
-    display: block;
-    text-align: center !important;
-}
