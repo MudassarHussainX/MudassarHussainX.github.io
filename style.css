@@ -106,26 +106,3 @@ body {
     }
 }
 
-.card h2 {
-    position: relative;
-    margin-bottom: 12px;
-    transition: 0.3s;
-}
-
-.card h2 {
-    position: relative;
-    margin-bottom: 12px;
-    color: #1e3a8a;
-}
-
-
-.card h2::after {
-    content: "";
-    width: 40%;
-    height: 3px;
-    background: linear-gradient(90deg, #2563eb, #60a5fa);
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    border-radius: 5px;
-}
