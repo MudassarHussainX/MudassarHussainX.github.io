@@ -1,4 +1,4 @@
-body {
+7body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #c7d2fe, #e0f2fe);
@@ -116,4 +116,9 @@ body {
 .center-heading i {
     margin-right: 6px;
     font-size: 18px;
+}
+.center-heading {
+    width: 100%;
+    display: block;
+    text-align: center !important;
 }
