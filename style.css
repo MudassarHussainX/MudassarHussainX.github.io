@@ -41,7 +41,7 @@ body {
 
 /* PROFILE IMAGE */
 .profile-pic {
-    animation: glow 2.5s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
     width: 140px;
     height: 140px;
     border-radius: 50%;
