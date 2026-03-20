@@ -108,3 +108,31 @@ body {
         box-shadow: 0 0 30px rgba(255,255,255,1);
     }
 }
+
+.card h2 {
+    position: relative;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+
+.card h2::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    border-radius: 5px;
+    transition: 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.card:hover h2::after {
+    width: 60%;
+}
+
+.card:hover h2 {
+    color: #2563eb;
+}
