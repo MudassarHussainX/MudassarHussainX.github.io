@@ -5,7 +5,7 @@ body {
     transition: 0.4s;
 }
 
-/* DARK MODE */
+
 .dark {
     background: #0f172a;
     color: white;
@@ -19,7 +19,7 @@ body {
     background: linear-gradient(135deg, #020617, #0f172a);
 }
 
-/* BUTTON */
+
 .theme-toggle {
     position: fixed;
     top: 15px;
@@ -31,7 +31,7 @@ body {
     cursor: pointer;
 }
 
-/* HERO */
+
 .hero {
     text-align: center;
     padding: 50px;
@@ -39,7 +39,6 @@ body {
     color: white;
 }
 
-/* PROFILE IMAGE */
 .profile-pic {
     animation: glow 2s ease-in-out infinite alternate;
     width: 140px;
@@ -51,7 +50,7 @@ body {
     margin: 10px auto;
 }
 
-/* NAME ANIMATION */
+
 .fade-in {
     opacity: 0;
     transform: translateY(-20px);
@@ -69,7 +68,7 @@ body {
     }
 }
 
-/* CARDS */
+
 .card {
     background: white;
     padding: 20px;
@@ -85,13 +84,11 @@ body {
     transform: translateY(0);
 }
 
-/* FIX PROFILE */
 .no-anim {
     opacity: 1 !important;
     transform: none !important;
 }
 
-/* TEXT */
 .center {
     text-align: center;
 }
@@ -115,24 +112,20 @@ body {
     transition: 0.3s;
 }
 
+.card h2 {
+    position: relative;
+    margin-bottom: 12px;
+    color: #1e3a8a;
+}
+
 
 .card h2::after {
     content: "";
-    width: 0%;
+    width: 40%;
     height: 3px;
     background: linear-gradient(90deg, #2563eb, #60a5fa);
     position: absolute;
     left: 0;
     bottom: -5px;
     border-radius: 5px;
-    transition: 0.4s ease;
-}
-
-/* HOVER EFFECT */
-.card:hover h2::after {
-    width: 60%;
-}
-
-.card:hover h2 {
-    color: #2563eb;
 }
