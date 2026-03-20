@@ -103,7 +103,6 @@ I am a first-year dental student at the beginning of my academic journey, curren
 <script>
 const btn = document.getElementById("themeBtn");
 
-/* AUTO DETECT SYSTEM THEME */
 function applyTheme() {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add("dark");
@@ -114,16 +113,15 @@ function applyTheme() {
     }
 }
 
-/* RUN ON LOAD */
+
 document.addEventListener("DOMContentLoaded", applyTheme);
 
-/* TOGGLE BUTTON */
+
 function toggleTheme() {
     document.body.classList.toggle("dark");
     btn.innerText = document.body.classList.contains("dark") ? "☀️" : "🌑";
 }
 
-/* CARD ANIMATION */
 document.addEventListener("DOMContentLoaded", function () {
     const cards = document.querySelectorAll(".card");
     cards.forEach((card, index) => {
