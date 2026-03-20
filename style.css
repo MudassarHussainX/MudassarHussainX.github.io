@@ -108,3 +108,10 @@
 .card h2 {
 margin-bottom: 10px;
 }
+.contact-box {
+    margin-left: 2px;
+}
+
+.contact-box p {
+    margin: 8px 0;
+}
